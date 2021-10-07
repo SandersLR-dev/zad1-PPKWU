@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class ReverseController {
 
     @GetMapping("/{reverse}")
-    public String reverseString(@PathVariable String reverse){
-        return "abc";
+    public String reverseString(@PathVariable String reverse) {
+        return new StringBuilder(reverse).reverse().toString();
     }
 }
